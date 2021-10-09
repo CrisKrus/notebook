@@ -65,7 +65,9 @@ into the docker container and stop it.
 ## Roadmap :roller_coaster:
 
 I know that it needs to be improved to be able to work on https connections and avoid
-the initial messages on startup. I will fix it in some point.
+the initial messages on startup. I will fix it in some point. Also. I know that it
+could be a good idea to have a makefile instead of multiple scrips. If you know how
+to do it, open a pull request :wink:
 
 <!-- SOCIAL -->
 
