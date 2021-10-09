@@ -1,5 +1,7 @@
 FROM jupyter/minimal-notebook
 
+LABEL author="mail@criskrus.com"
+
 ENV JUPYTER_ENABLE_LAB=yes
 ENV GRANT_SUDO=yes
 ENV CHOWN_HOME=yes
@@ -30,8 +32,6 @@ RUN conda install --yes --file requirements.txt && \
     conda clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
-
-COPY . .
 
 # prepend conda environment to path and set to default
 ENV PATH "${CONDA_DIR}/envs/${conda_env}/bin:${PATH}"
